@@ -30,14 +30,14 @@
       <img alt="GitHub" src="assets/social-github-dark.svg" height="34">
     </picture>
   </a>
-  <a href="https://www.linkedin.com/in/jha-sk">
+  <a href="https://www.linkedin.com/in/sk-jha/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/social-linkedin-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/social-linkedin-light.svg">
       <img alt="LinkedIn" src="assets/social-linkedin-dark.svg" height="34">
     </picture>
   </a>
-  <a href="https://x.com/jha_sk">
+  <a href="https://x.com/cannibiscoder">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/social-x-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/social-x-light.svg">
