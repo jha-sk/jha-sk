@@ -48,9 +48,10 @@ def banner(c):
              f'stroke="{c["border"]}" stroke-width="1"/>')
 
     fy, fx = y + lh * 3 + 14, x
-    focus = [("langchain", "LLM systems", c["blue"]), ("qdrant", "RAG", c["orange"]),
-             ("ray", "agents", c["green"]), ("weightsandbiases", "evals", c["yellow"]),
-             ("vllm", "inference @ scale", c["cyan"])]
+    focus = [("modelcontextprotocol", "MCP tooling", c["blue"]),
+             ("_tree", "code intelligence", c["orange"]),
+             ("claude", "LLM pipelines", c["magenta"]),
+             ("githubactions", "automation", c["green"])]
     for slug, label, col in focus:
         p.append(icon(slug, fx, fy - 12, 15, col))
         p.append(f'<text x="{fx + 21}" y="{fy}" font-family="{MONO}" font-size="14" '
@@ -65,20 +66,21 @@ def banner(c):
 
 
 # --------------------------------------------------------------------------- stack
+# Kept honest: everything here appears in a real repo's manifest or language
+# stats. Aspirational tooling belongs in a project, not on a profile card.
 GROUPS = [
     ("code", "blue", "python", [
-        ("Python", "python"), ("TypeScript", "typescript"), ("Go", "go"),
-        ("Rust", "rust"), ("SQL", "postgresql")]),
-    ("llm / genai", "magenta", "claude", [
-        ("PyTorch", "pytorch"), ("Transformers", "huggingface"), ("LangGraph", "langchain"),
-        ("Claude API", "claude"), ("OpenAI", "openai"), ("vLLM", "vllm")]),
-    ("retrieval / data", "cyan", "duckdb", [
-        ("pgvector", "postgresql"), ("Qdrant", "qdrant"), ("Redis", "redis"),
-        ("DuckDB", "duckdb"), ("Airflow", "apacheairflow"), ("Kafka", "apachekafka")]),
-    ("serving / ops", "green", "kubernetes", [
-        ("FastAPI", "fastapi"), ("Ray", "ray"), ("Docker", "docker"),
-        ("Kubernetes", "kubernetes"), ("AWS", "amazonaws"), ("Terraform", "terraform"),
-        ("W&B", "weightsandbiases")]),
+        ("Python", "python"), ("Go", "go"), ("TypeScript", "typescript"),
+        ("JavaScript", "javascript"), ("SQL", "postgresql"), ("Lua", "lua")]),
+    ("ai / agents", "magenta", "claude", [
+        ("Claude API", "claude"), ("Gemini", "googlegemini"),
+        ("MCP", "modelcontextprotocol"), ("tree-sitter", "_tree")]),
+    ("web / product", "cyan", "react", [
+        ("React 19", "react"), ("Next.js", "nextdotjs"), ("Vite", "vite"),
+        ("Tailwind", "tailwindcss"), ("Zod", "zod")]),
+    ("data / ops", "green", "supabase", [
+        ("Supabase", "supabase"), ("Postgres", "postgresql"), ("Actions", "githubactions"),
+        ("Docker", "docker"), ("Vitest", "vitest"), ("Git", "git"), ("Linux", "linux")]),
 ]
 
 

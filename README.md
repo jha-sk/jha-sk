@@ -4,7 +4,7 @@
   SVGs in ./assets, swapped via <picture> + prefers-color-scheme.
 
   TO PERSONALISE, edit:
-    · the links in the chips row below (LinkedIn / X / Hugging Face / email)
+    · the links in the chips row below (GitHub / LinkedIn / X / email)
     · "Currently" and "Selected work" — replace with your real repos
     · the stack: edit GROUPS in assets/generate.py, then `python assets/generate.py`
 
@@ -57,15 +57,15 @@
 
 ---
 
-I build **LLM systems that survive contact with production** — retrieval that stays
-grounded, agents that fail loudly instead of silently, and inference that stays cheap
-under load. Most of my work lives at the seam between a model and the system around it:
-evals, guardrails, latency budgets, and cost per request.
+I build **AI tooling that runs unattended** — agents that do a real job end to end,
+and developer tools that give a model genuine context about a codebase instead of a
+pile of files. Most of what I ship is the unglamorous half: parsing, scheduling,
+retries, and the plumbing that keeps a pipeline alive after the demo.
 
-- 🧠 **Now** — agentic retrieval pipelines: multi-hop RAG, tool-calling graphs, structured outputs
-- 🔬 **Thinking about** — eval-driven development for LLM apps; offline scores that actually predict online behaviour
-- ⚙️ **Optimising** — token cost and p95 latency at inference time (batching, caching, quantisation, smaller routers)
-- 🤝 **Open to** — collaborating on open-source AI tooling, evals, and inference infrastructure
+- 🧠 **Now** — MCP servers and code intelligence: tree-sitter parsing, dependency graphs, architectural risk scoring
+- 🤖 **Running in production** — an autonomous job-hunt agent that fetches, scores, tailors, and reports every morning on a $0/month budget
+- 🛠 **Also building** — offline-first product work in React + Supabase for people with bad connectivity and real deadlines
+- 🤝 **Open to** — collaborating on open-source AI developer tooling and agent infrastructure
 
 <br>
 
@@ -85,13 +85,13 @@ evals, guardrails, latency budgets, and cost per request.
 
 ## Selected work
 
-<!-- Replace these with your real repositories — pin the same ones on your profile. -->
+<!-- Pin these same three on your profile so the section and the sidebar agree. -->
 
 | Project | What it does | Stack |
 | :--- | :--- | :--- |
-| **[project-one](https://github.com/jha-sk)** | Multi-hop RAG service with citation-grounded answers and a regression eval suite | `Python` · `FastAPI` · `pgvector` |
-| **[project-two](https://github.com/jha-sk)** | Agent runtime with typed tools, retries, and per-step tracing | `Python` · `LangGraph` · `Claude API` |
-| **[project-three](https://github.com/jha-sk)** | Self-hosted inference gateway — routing, batching, token accounting | `Go` · `vLLM` · `Kubernetes` |
+| **[codebase-analyzer](https://github.com/jha-sk/codebase-analyzer)** | MCP server + CLI giving Claude architectural insight into a repo — tree-sitter dependency graphs, Tarjan cycle detection, 0–100 risk scoring, and a self-contained 3-layer interactive graph | `Python` · `MCP` · `tree-sitter` |
+| **[job-hunt-agent](https://github.com/jha-sk/job-hunt-agent)** | Autonomous daily job pipeline — fetch, score against your resume, tailor a PDF, watch for recruiter replies, email one digest. Runs on Actions' free tier at $0/month | `Python` · `LLM` · `GitHub Actions` |
+| **[Logistics-dashboard](https://github.com/jha-sk/Logistics-dashboard)** | Offline-first PWA for small freight operators — trips, expenses, and P&L, with optional Supabase sync and invite-only access enforced in Postgres row-level security | `React 19` · `TypeScript` · `Supabase` |
 
 <br>
 
@@ -99,11 +99,11 @@ evals, guardrails, latency budgets, and cost per request.
 
 ```yaml
 principles:
-  - evals before prompts        # you cannot improve what you cannot measure
-  - retrieval beats fine-tuning # until it provably doesn't
-  - small models, sharp scope   # route the easy 80% away from the expensive model
-  - observability by default    # traces, token counts, and cost on every request
-  - ship thin, measure, widen
+  - parse, never regex          # tree-sitter over guesswork when reading code
+  - filter before you spend     # cull 80% of the input before it reaches the model
+  - read-only by default        # a tool that analyses your repo must not touch it
+  - free tier as a constraint   # $0/month forces honest scope
+  - it should survive Monday    # unattended beats impressive
 ```
 
 <br>
