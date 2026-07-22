@@ -112,7 +112,6 @@ SOCIALS = [
     ("GitHub", "github", "blue"),
     ("LinkedIn", "linkedin", "cyan"),
     ("X", "x", "magenta"),
-    ("Hugging Face", "huggingface", "orange"),
     ("Email", "gmail", "green"),
 ]
 

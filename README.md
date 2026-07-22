@@ -44,14 +44,7 @@
       <img alt="X" src="assets/social-x-dark.svg" height="34">
     </picture>
   </a>
-  <a href="https://huggingface.co/jha-sk">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/social-hugging-face-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/social-hugging-face-light.svg">
-      <img alt="Hugging Face" src="assets/social-hugging-face-dark.svg" height="34">
-    </picture>
-  </a>
-  <a href="mailto:sourabhjha96444@gmail.com">
+  <a href="mailto:sourabhjha.personal@gmail.com">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/social-email-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/social-email-light.svg">
